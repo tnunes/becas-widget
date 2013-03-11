@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" value="IE=edge,chrome=1" />
+    <title>becas widget samples</title>
+
+    <style type="text/css">
+        body {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+        .widget-container {
+            max-width: 800px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1>becas widget samples</h1>
+
+    <p>This is a sample host page showcasing 2 embedded becas widgets.</p>
+    <p>Read more about the widget in the <a href="http://bioinformatics.ua.pt/becas/widget">docs</a>.</p>
+
+    <h3>Text annotation</h3>
+    <!-- Container to hold one widget -->
+    <div id="becas-widget-text" class="widget-container"></div>
+
+    <br />
+
+    <h3>Abstract annotation</h3>
+    <!-- Container to hold another widget -->
+    <div id="becas-widget-pmid" class="widget-container"></div>
+
+    <!-- Include the widget embedding script -->
+    <script src="http://bioinformatics.ua.pt/becas/embed-widget.js"></script>
+    <!-- Use the widgets -->
+    <script>
+        // Initialize widget
+        var becasWidget = new becas.Widget({
+            container: 'becas-widget-text'
+        });
+        // Request text annotation
+        becasWidget.annotateText({
+            text: 'In Duchenne muscular dystrophy (DMD), the infiltration of skeletal muscle by immune cells aggravates disease, yet the precise mechanisms behind these inflammatory responses remain poorly understood. Chemotactic cytokines, or chemokines, are considered essential recruiters of inflammatory cells to the tissues.\nWe assayed chemokine and chemokine receptor expression in DMD muscle biopsies (n = 9, average age 7 years) using immunohistochemistry, immunofluorescence, and in situ hybridization.\nCXCL1, CXCL2, CXCL3, CXCL8, and CXCL11, absent from normal muscle fibers, were induced in DMD myofibers. CXCL11, CXCL12, and the ligand-receptor couple CCL2-CCR2 were upregulated on the blood vessel endothelium of DMD patients. CD68(+) macrophages expressed high levels of CXCL8, CCL2, and CCL5.\nOur data suggest a possible beneficial role for CXCR1/2/4 ligands in managing muscle fiber damage control and tissue regeneration. Upregulation of endothelial chemokine receptors and CXCL8, CCL2, and CCL5 expression by cytotoxic macrophages may regulate myofiber necrosis.'
+        });
+
+        // Initialize another widget
+        var becasWidget2 = new becas.Widget({
+            container: 'becas-widget-pmid'
+        });
+        // Request abstract annotation by PMID
+        becasWidget2.annotatePublication({
+            pmid: 23225384
+        });
+    </script>
+    <!-- Display a message to users with Javascript deactivated -->
+    <noscript>
+        <div style="position:absolute;top:0;left:0;width:500px;height:250px;border:2px solid #A00;padding:6px;background-color:#fff;color:#600;text-align:center">
+            <h1>This page requires Javascript to function properly.</h1>
+            <h2>Please follow this instructions on how to <a href="http://www.enable-javascript.com/" target="_blank">enable JavaScript in your web browser</a>.</h2>
+        </div>
+    </noscript>
+  </body>
+</html>
