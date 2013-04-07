@@ -11,7 +11,7 @@ You can read more about becas at http://bioinformatics.ua.pt/becas/about.
 The widget
 ==========
 
-The [becas widget](http://tnunes.github.com/becas-widget/) allows you to integrate becas annotation, highlighting and export
+The [becas widget](http://tnunes.github.io/becas-widget/) allows you to integrate becas annotation, highlighting and export
 features in your webpages.
 
 Read more about how to use the widget in the [documentation](http://bioinformatics.ua.pt/becas/widget).
