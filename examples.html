@@ -59,11 +59,11 @@
                 "FUNC": true,
                 "PROC": true
             },
-            success: function () {
-                // Everything went fine, widget is rendered.
+            success: function (results) {
+                // console.log("Annotation was successful and widget has rendered in the page.", results);
             },
             error: function (err) {
-                // An error prevented annotation, an error message has rendered.
+                // console.error("An error prevented successful annotation, an error message has rendered.", err);
             }
         });
 
@@ -89,11 +89,11 @@
                 "FUNC": true,
                 "PROC": true
             },
-            success: function () {
-                // Everything went fine, widget is rendered.
+            success: function (results) {
+                // console.log("Annotation was successful and widget has rendered in the page.", results);
             },
             error: function (err) {
-                // An error prevented annotation, an error message has rendered.
+                // console.error("An error prevented successful annotation, an error message has rendered.", err);
             }
         });
     </script>
